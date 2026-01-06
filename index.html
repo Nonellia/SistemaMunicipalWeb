@@ -1,64 +1,795 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="output.css" />
-    <title>Document</title>
-  </head>
-  <body>
-<!-- Header Section -->
-    <header class="bg-blue-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-            <div class="flex items-center justify-between">
-                <!-- Logo Section -->
-                <div class="flex-shrink-0">
-                    <a href="#" class="text-2xl font-bold">Tailwind </a>
-                </div>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <title>Municipalidad de Río Gallegos - Portal Oficial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portal oficial del Gobierno Municipal de Río Gallegos, Santa Cruz. Trámites, servicios y gestión pública.">
+  <meta name="keywords" content="municipalidad, gobierno, Río Gallegos, trámites municipales, gestión pública">
+  <link rel="stylesheet" href="output.css"/>
+  <!-- Tailwind CSS -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+ 
+  <!-- Configuración de Tailwind -->
+  <!-- <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'institucional': '#1e3a5f',      // Azul institucional
+            'secundario': '#2c5282',         // Azul secundario
+            'acento': '#d4a017',             // Dorado institucional
+            'gris-claro': '#f8fafc',
+            'gris-medio': '#e2e8f0',
+            'gris-oscuro': '#4a5568'
+          },
+          fontFamily: {
+            'serif': ['Georgia', 'Times New Roman', 'serif'],
+            'sans': ['Arial', 'Helvetica', 'sans-serif']
+          },
+          boxShadow: {
+            'elevado': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+            'card': '0 2px 8px rgba(0, 0, 0, 0.08)'
+          }
+        }
+      }
+    }
+  </script> -->
 
-                <!-- Navigation Menu -->
-                <nav class="hidden md:flex space-x-10 text-lg">
-                    <a href="#" class="hover:text-gray-300 transition-all">Home</a>
-                    <a href="#services" class="hover:text-gray-300 transition-all">Services</a>
-                    <a href="#about" class="hover:text-gray-300 transition-all">About Us</a>
-                    <a href="#contact" class="hover:text-gray-300 transition-all">Contact</a>
-                </nav>
 
-                <!-- Call-to-Action Button -->
-                <div class="hidden md:block">
-                    <a href="#contact" class="bg-yellow-500 hover:bg-yellow-400 text-black py-2 px-6 rounded-full text-lg transition-all">
-                        Get in Touch
-                    </a>
-                </div>
+</head>
 
-                <!-- Mobile Menu Button (for smaller screens) -->
-                <div class="md:hidden flex items-center">
-                    <button id="menu-button" class="text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
+<body class="bg-gris-claro text-gris-oscuro">
+  <!-- Header Institucional -->
+  <header class="header-institucional text-white sticky top-0 z-50 shadow-elevado">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center py-4">
+        <!-- Logo y marca -->
+        <div class="flex items-center space-x-4 mb-4 md:mb-0">
+          <div class="bg-white p-2 rounded">
+            <!-- Aquí iría el escudo oficial -->
+            <div class="w-12 h-12 bg-secundario rounded flex items-center justify-center">
+              <span class="font-bold text-white text-xl">RG</span>
             </div>
-
-            <!-- Mobile Navigation Menu -->
-            <div id="mobile-menu" class="md:hidden mt-5 hidden space-y-4">
-                <a href="#" class="block text-lg hover:text-gray-300 transition-all">Home</a>
-                <a href="#services" class="block text-lg hover:text-gray-300 transition-all">Services</a>
-                <a href="#about" class="block text-lg hover:text-gray-300 transition-all">About Us</a>
-                <a href="#contact" class="block text-lg hover:text-gray-300 transition-all">Contact</a>
-            </div>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold">Municipalidad de Río Gallegos</h1>
+            <p class="text-sm text-blue-200">Gobierno Municipal - Santa Cruz</p>
+          </div>
         </div>
-    </header>
+       
+        <!-- Información de contacto -->
+        <div class="text-sm text-center md:text-right">
+          <div class="mb-2">
+            <i data-lucide="phone" class="w-4 h-4 inline mr-2"></i>
+            <span>Teléfono: <strong>2966 457021</strong></span>
+          </div>
+          <div>
+            <i data-lucide="clock" class="w-4 h-4 inline mr-2"></i>
+            <span>Atención: Lunes a Viernes 8:00 a 20:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <!-- Navegación principal -->
+    <nav class="bg-secundario">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="hidden md:flex space-x-6 py-3">
+            <a href="#inicio" class="text-white hover:text-acento font-medium py-2 border-b-2 border-transparent hover:border-acento transition">
+              Inicio
+            </a>
+            <a href="#gobierno" class="text-white hover:text-acento font-medium py-2 border-b-2 border-transparent hover:border-acento transition">
+              Gobierno
+            </a>
+            <a href="#tramites" class="text-white hover:text-acento font-medium py-2 border-b-2 border-transparent hover:border-acento transition">
+              Trámites
+            </a>
+            <a href="#servicios" class="text-white hover:text-acento font-medium py-2 border-b-2 border-transparent hover:border-acento transition">
+              Servicios
+            </a>
+            <a href="#transparencia" class="text-white hover:text-acento font-medium py-2 border-b-2 border-transparent hover:border-acento transition">
+              Transparencia
+            </a>
+            <a href="#contacto" class="text-white hover:text-acento font-medium py-2 border-b-2 border-transparent hover:border-acento transition">
+              Contacto
+            </a>
+          </div>
+         
+          <div class="py-3">
+            <a href="https://portal.riogallegos.gob.ar"
+               class="btn-acento px-4 py-2 rounded font-semibold hover:shadow-lg transition inline-flex items-center">
+              <i data-lucide="user" class="w-4 h-4 mr-2"></i>
+              Acceso Ciudadano
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <script>
-        // Mobile Menu Toggle
-        const menuButton = document.getElementById('menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+  <!-- Hero Institucional -->
+  <section id="inicio" class="hero-institucional text-white py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl">
+        <div class="mb-6">
+          <span class="bg-acento text-institucional px-4 py-1 rounded-full text-sm font-semibold">
+            Portal Oficial
+          </span>
+        </div>
+       
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          Gobierno Municipal<br>
+          de Río Gallegos
+        </h1>
+       
+        <p class="text-xl mb-8 text-blue-100 leading-relaxed">
+          Trabajando por el desarrollo sostenible y el bienestar de nuestra comunidad.
+          Gestión transparente, servicios eficientes y atención cercana al ciudadano.
+        </p>
+       
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#tramites" class="btn-institucional px-6 py-3 rounded font-semibold hover:shadow-lg transition inline-flex items-center justify-center">
+            <i data-lucide="file-text" class="w-5 h-5 mr-2"></i>
+            Trámites en Línea
+          </a>
+          <a href="#transparencia" class="bg-white text-institucional px-6 py-3 rounded font-semibold hover:bg-gray-100 hover:shadow-lg transition inline-flex items-center justify-center">
+            <i data-lucide="shield" class="w-5 h-5 mr-2"></i>
+            Transparencia Activa
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>  
-    </body>
+  <!-- Sección Gobierno -->
+  <section id="gobierno" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="seccion-titulo text-3xl font-bold text-institucional mb-8">
+        Gobierno Municipal
+      </h2>
+     
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <!-- Intendente -->
+        <div class="card-institucional bg-gris-claro p-6 rounded-lg animacion-fade">
+          <div class="mb-4">
+            <div class="w-24 h-24 bg-secundario rounded-full mx-auto mb-4 overflow-hidden">
+              <!-- Imagen del intendente -->
+              <div class="w-full h-full bg-secundario flex items-center justify-center text-white text-2xl font-bold">
+                IA
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-institucional text-center">Intendente Municipal</h3>
+            <p class="text-secundario text-center">Lic. Alejandro Rodríguez</p>
+          </div>
+          <p class="text-gray-600 text-center mb-4">
+            Al frente de la gestión municipal desde 2023, comprometido con el desarrollo integral de Río Gallegos.
+          </p>
+          <div class="text-center">
+            <a href="#" class="text-secundario hover:text-institucional font-medium inline-flex items-center">
+              Ver mensaje del Intendente
+              <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+        </div>
+       
+        <!-- Concejo Deliberante -->
+        <div class="card-institucional bg-gris-claro p-6 rounded-lg animacion-fade">
+          <div class="mb-4">
+            <div class="w-12 h-12 bg-acento rounded-lg flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="users" class="w-6 h-6 text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-institucional text-center">Concejo Deliberante</h3>
+            <p class="text-secundario text-center">Órgano Legislativo</p>
+          </div>
+          <p class="text-gray-600 text-center mb-4">
+            15 concejales representando a la comunidad. Sesiones públicas todos los martes a las 18:00.
+          </p>
+          <div class="text-center">
+            <a href="#" class="text-secundario hover:text-institucional font-medium inline-flex items-center">
+              Ver ordenanzas y sesiones
+              <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+        </div>
+       
+        <!-- Secretarías -->
+        <div class="card-institucional bg-gris-claro p-6 rounded-lg animacion-fade">
+          <div class="mb-4">
+            <div class="w-12 h-12 bg-institucional rounded-lg flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="building" class="w-6 h-6 text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-institucional text-center">Secretarías Municipales</h3>
+            <p class="text-secundario text-center">Gestión Ejecutiva</p>
+          </div>
+          <p class="text-gray-600 text-center mb-4">
+            8 secretarías trabajando en áreas clave: Obras Públicas, Salud, Educación, Producción y más.
+          </p>
+          <div class="text-center">
+            <a href="#" class="text-secundario hover:text-institucional font-medium inline-flex items-center">
+              Conocer estructura organizativa
+              <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+     
+      <!-- Tabla de autoridades -->
+      <div class="bg-white rounded-lg shadow-card overflow-hidden">
+        <div class="px-6 py-4 bg-gris-claro border-b border-gris-medio">
+          <h3 class="font-bold text-institucional">Autoridades Municipales 2023-2027</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="tabla-institucional">
+            <thead>
+              <tr>
+                <th>Cargo</th>
+                <th>Nombre</th>
+                <th>Área</th>
+                <th>Contacto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-medium">Intendente</td>
+                <td>Lic. Alejandro Rodríguez</td>
+                <td>Gobierno</td>
+                <td>intendente@riogallegos.gob.ar</td>
+              </tr>
+              <tr>
+                <td class="font-medium">Secretario de Gobierno</td>
+                <td>Dr. Martín López</td>
+                <td>Gobierno y Coordinación</td>
+                <td>gobierno@riogallegos.gob.ar</td>
+              </tr>
+              <tr>
+                <td class="font-medium">Secretario de Obras Públicas</td>
+                <td>Ing. Carlos Fernández</td>
+                <td>Infraestructura</td>
+                <td>obras@riogallegos.gob.ar</td>
+              </tr>
+              <tr>
+                <td class="font-medium">Secretaria de Salud</td>
+                <td>Dra. Laura Martínez</td>
+                <td>Salud Pública</td>
+                <td>salud@riogallegos.gob.ar</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Trámites -->
+  <section id="tramites" class="py-16 bg-gris-claro">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="seccion-titulo centrado text-3xl font-bold text-institucional inline-block">
+          Trámites y Servicios Digitales
+        </h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+          Realice sus trámites municipales de manera rápida y segura desde cualquier dispositivo
+        </p>
+      </div>
+     
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <!-- Trámite 1 -->
+        <a href="#" class="card-institucional bg-white p-6 rounded-lg animacion-fade hover:no-underline">
+          <div class="flex items-start mb-4">
+            <div class="bg-blue-50 p-3 rounded-lg mr-4">
+              <i data-lucide="credit-card" class="w-6 h-6 text-institucional"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-institucional text-lg mb-2">Pago de Tasas</h3>
+              <p class="text-gray-600 text-sm">ABM, Tasa Retributiva y Servicios</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="badge-estado badge-activo">En línea</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-secundario"></i>
+          </div>
+        </a>
+       
+        <!-- Trámite 2 -->
+        <a href="#" class="card-institucional bg-white p-6 rounded-lg animacion-fade hover:no-underline">
+          <div class="flex items-start mb-4">
+            <div class="bg-green-50 p-3 rounded-lg mr-4">
+              <i data-lucide="car" class="w-6 h-6 text-institucional"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-institucional text-lg mb-2">Licencia de Conducir</h3>
+              <p class="text-gray-600 text-sm">Renovación y obtención</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="badge-estado badge-activo">En línea</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-secundario"></i>
+          </div>
+        </a>
+       
+        <!-- Trámite 3 -->
+        <a href="#" class="card-institucional bg-white p-6 rounded-lg animacion-fade hover:no-underline">
+          <div class="flex items-start mb-4">
+            <div class="bg-purple-50 p-3 rounded-lg mr-4">
+              <i data-lucide="home" class="w-6 h-6 text-institucional"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-institucional text-lg mb-2">Habilitaciones Comerciales</h3>
+              <p class="text-gray-600 text-sm">Inicio de actividad comercial</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="badge-estado badge-activo">En línea</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-secundario"></i>
+          </div>
+        </a>
+       
+        <!-- Trámite 4 -->
+        <a href="#" class="card-institucional bg-white p-6 rounded-lg animacion-fade hover:no-underline">
+          <div class="flex items-start mb-4">
+            <div class="bg-amber-50 p-3 rounded-lg mr-4">
+              <i data-lucide="file-text" class="w-6 h-6 text-institucional"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-institucional text-lg mb-2">Certificados</h3>
+              <p class="text-gray-600 text-sm">Libre deuda y otros certificados</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="badge-estado badge-pendiente">Con turno</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-secundario"></i>
+          </div>
+        </a>
+      </div>
+     
+      <!-- Sistema de turnos -->
+      <div class="bg-white rounded-lg shadow-card p-6 mb-8">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="mb-4 md:mb-0">
+            <h3 class="font-bold text-institucional text-xl mb-2">Sistema de Turnos Online</h3>
+            <p class="text-gray-600">Evite esperas y gestione su atención presencial</p>
+          </div>
+          <div>
+            <a href="#" class="btn-institucional px-6 py-3 rounded font-semibold hover:shadow-lg transition inline-flex items-center">
+              <i data-lucide="calendar" class="w-5 h-5 mr-2"></i>
+              Solicitar Turno
+            </a>
+          </div>
+        </div>
+      </div>
+     
+      <!-- Estadísticas -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white p-4 rounded-lg text-center border border-gris-medio">
+          <div class="numero-emergencia text-3xl mb-2">15,842</div>
+          <div class="text-gray-600 text-sm">Trámites online 2024</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg text-center border border-gris-medio">
+          <div class="numero-emergencia text-3xl mb-2">2.5h</div>
+          <div class="text-gray-600 text-sm">Tiempo promedio resolución</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg text-center border border-gris-medio">
+          <div class="numero-emergencia text-3xl mb-2">94%</div>
+          <div class="text-gray-600 text-sm">Satisfacción ciudadana</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg text-center border border-gris-medio">
+          <div class="numero-emergencia text-3xl mb-2">24/7</div>
+          <div class="text-gray-600 text-sm">Disponibilidad del sistema</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Transparencia -->
+  <section id="transparencia" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="seccion-titulo text-3xl font-bold text-institucional mb-8">
+        Transparencia y Rendición de Cuentas
+      </h2>
+     
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <!-- Presupuesto -->
+        <div class="lg:col-span-2">
+          <div class="bg-gris-claro rounded-lg p-6 h-full">
+            <div class="flex items-center mb-6">
+              <div class="bg-institucional p-3 rounded-lg mr-4">
+                <i data-lucide="pie-chart" class="w-6 h-6 text-white"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-institucional text-xl">Presupuesto Municipal 2024</h3>
+                <p class="text-gray-600">Distribución de recursos y ejecución</p>
+              </div>
+            </div>
+           
+            <div class="mb-6">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Servicios Públicos</span>
+                <span class="font-bold text-institucional">42%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-institucional h-2 rounded-full" style="width: 42%"></div>
+              </div>
+            </div>
+           
+            <div class="mb-6">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Infraestructura</span>
+                <span class="font-bold text-institucional">28%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-secundario h-2 rounded-full" style="width: 28%"></div>
+              </div>
+            </div>
+           
+            <div class="mb-6">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Salud y Educación</span>
+                <span class="font-bold text-institucional">20%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-acento h-2 rounded-full" style="width: 20%"></div>
+              </div>
+            </div>
+           
+            <div class="text-center">
+              <a href="#" class="text-secundario hover:text-institucional font-medium inline-flex items-center">
+                Ver presupuesto completo y ejecución
+                <i data-lucide="download" class="w-4 h-4 ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+       
+        <!-- Licitaciones -->
+        <div>
+          <div class="bg-gris-claro rounded-lg p-6 h-full">
+            <div class="flex items-center mb-6">
+              <div class="bg-acento p-3 rounded-lg mr-4">
+                <i data-lucide="gavel" class="w-6 h-6 text-white"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-institucional text-xl">Licitaciones Activas</h3>
+                <p class="text-gray-600">Procesos de contratación pública</p>
+              </div>
+            </div>
+           
+            <div class="space-y-4">
+              <div class="bg-white p-4 rounded border border-gris-medio">
+                <div class="flex justify-between items-start mb-2">
+                  <h4 class="font-medium text-institucional">Obra: Pavimentación Calle San Martín</h4>
+                  <span class="badge-estado badge-urgente">Urgente</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">N° Exp: 1254/2024</p>
+                <p class="text-gray-500 text-xs">Cierre: 15 Abril 2024</p>
+              </div>
+             
+              <div class="bg-white p-4 rounded border border-gris-medio">
+                <div class="flex justify-between items-start mb-2">
+                  <h4 class="font-medium text-institucional">Adquisición de Equipamiento Médico</h4>
+                  <span class="badge-estado badge-activo">Activo</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">N° Exp: 1287/2024</p>
+                <p class="text-gray-500 text-xs">Cierre: 30 Abril 2024</p>
+              </div>
+            </div>
+           
+            <div class="mt-6 text-center">
+              <a href="#" class="text-secundario hover:text-institucional font-medium inline-flex items-center">
+                Ver todas las licitaciones
+                <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <!-- Documentos públicos -->
+      <div class="bg-gris-claro rounded-lg p-6">
+        <h3 class="font-bold text-institucional text-xl mb-6">Documentos Públicos</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <a href="#" class="bg-white p-4 rounded border border-gris-medio hover:border-secundario transition group">
+            <div class="flex items-center">
+              <div class="mr-4">
+                <i data-lucide="file-text" class="w-8 h-8 text-institucional"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-institucional group-hover:text-secundario">Memoria y Balance 2023</h4>
+                <p class="text-gray-600 text-sm">PDF - 2.4 MB</p>
+              </div>
+            </div>
+          </a>
+         
+          <a href="#" class="bg-white p-4 rounded border border-gris-medio hover:border-secundario transition group">
+            <div class="flex items-center">
+              <div class="mr-4">
+                <i data-lucide="file-text" class="w-8 h-8 text-institucional"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-institucional group-hover:text-secundario">Ordenanzas Aprobadas</h4>
+                <p class="text-gray-600 text-sm">ZIP - 15.2 MB</p>
+              </div>
+            </div>
+          </a>
+         
+          <a href="#" class="bg-white p-4 rounded border border-gris-medio hover:border-secundario transition group">
+            <div class="flex items-center">
+              <div class="mr-4">
+                <i data-lucide="file-text" class="w-8 h-8 text-institucional"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-institucional group-hover:text-secundario">Informe de Gestión Trimestral</h4>
+                <p class="text-gray-600 text-sm">PDF - 1.8 MB</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Emergencias -->
+  <section id="emergencias" class="py-16 bg-institucional text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="seccion-titulo centrado text-3xl font-bold inline-block" style="border-color: var(--color-acento);">
+          Emergencias y Contacto Urgente
+        </h2>
+        <p class="text-blue-200 mt-4 max-w-2xl mx-auto">
+          Atención inmediata las 24 horas, los 365 días del año
+        </p>
+      </div>
+     
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <!-- Emergencia 1 -->
+        <a href="tel:144" class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition group">
+          <div class="flex items-center justify-between mb-4">
+            <div class="bg-red-500/20 p-3 rounded-lg">
+              <i data-lucide="heart-off" class="w-6 h-6 text-red-300"></i>
+            </div>
+            <span class="text-3xl font-bold">144</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Violencia de Género</h3>
+          <p class="text-blue-200 text-sm">Atención, contención y asesoramiento</p>
+        </a>
+       
+        <!-- Emergencia 2 -->
+        <a href="tel:107" class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition group">
+          <div class="flex items-center justify-between mb-4">
+            <div class="bg-green-500/20 p-3 rounded-lg">
+              <i data-lucide="ambulance" class="w-6 h-6 text-green-300"></i>
+            </div>
+            <span class="text-3xl font-bold">107</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Emergencias Médicas</h3>
+          <p class="text-blue-200 text-sm">Ambulancias y atención médica urgente</p>
+        </a>
+       
+        <!-- Emergencia 3 -->
+        <a href="tel:103" class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition group">
+          <div class="flex items-center justify-between mb-4">
+            <div class="bg-blue-500/20 p-3 rounded-lg">
+              <i data-lucide="shield-alert" class="w-6 h-6 text-blue-300"></i>
+            </div>
+            <span class="text-3xl font-bold">103</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Defensa Civil</h3>
+          <p class="text-blue-200 text-sm">Emergencias climáticas y ambientales</p>
+        </a>
+       
+        <!-- Emergencia 4 -->
+        <a href="tel:100" class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition group">
+          <div class="flex items-center justify-between mb-4">
+            <div class="bg-amber-500/20 p-3 rounded-lg">
+              <i data-lucide="phone-call" class="w-6 h-6 text-amber-300"></i>
+            </div>
+            <span class="text-3xl font-bold">100</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Policía Municipal</h3>
+          <p class="text-blue-200 text-sm">Seguridad y protección ciudadana</p>
+        </a>
+      </div>
+     
+      <!-- Información de contacto -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="font-bold text-xl mb-4 flex items-center">
+              <i data-lucide="map-pin" class="w-5 h-5 mr-2"></i>
+              Ubicación
+            </h3>
+            <p class="text-blue-200">
+              Municipalidad de Río Gallegos<br>
+              Av. José de San Martín Nº 791<br>
+              Río Gallegos, Santa Cruz<br>
+              CP: 9400
+            </p>
+          </div>
+         
+          <div>
+            <h3 class="font-bold text-xl mb-4 flex items-center">
+              <i data-lucide="clock" class="w-5 h-5 mr-2"></i>
+              Horarios de Atención
+            </h3>
+            <p class="text-blue-200">
+              <strong>Lunes a Viernes:</strong> 8:00 - 20:00<br>
+              <strong>Sábados:</strong> 9:00 - 13:00<br>
+              <strong>Emergencias:</strong> 24/7
+            </p>
+          </div>
+         
+          <div>
+            <h3 class="font-bold text-xl mb-4 flex items-center">
+              <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+              Contacto General
+            </h3>
+            <p class="text-blue-200">
+              <strong>Teléfono:</strong> 2966 457021<br>
+              <strong>Email:</strong> info@riogallegos.gob.ar<br>
+              <strong>WhatsApp:</strong> +54 9 2966 512345
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Institucional -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <!-- Columna 1 -->
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="bg-white p-2 rounded mr-3">
+              <div class="w-8 h-8 bg-institucional rounded"></div>
+            </div>
+            <div>
+              <h3 class="font-bold text-lg">Municipalidad</h3>
+              <p class="text-gray-400 text-sm">Río Gallegos</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm mb-4">
+            Gobierno Municipal comprometido con el desarrollo sostenible y el bienestar de la comunidad.
+          </p>
+          <div class="flex space-x-3">
+            <a href="#" class="bg-gray-800 hover:bg-gray-700 p-2 rounded transition">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="bg-gray-800 hover:bg-gray-700 p-2 rounded transition">
+              <i data-lucide="twitter" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="bg-gray-800 hover:bg-gray-700 p-2 rounded transition">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="bg-gray-800 hover:bg-gray-700 p-2 rounded transition">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+       
+        <!-- Columna 2 -->
+        <div>
+          <h4 class="font-bold mb-4">Enlaces Rápidos</h4>
+          <ul class="space-y-2">
+            <li><a href="#gobierno" class="text-gray-400 hover:text-white transition">Gobierno Municipal</a></li>
+            <li><a href="#tramites" class="text-gray-400 hover:text-white transition">Trámites en Línea</a></li>
+            <li><a href="#transparencia" class="text-gray-400 hover:text-white transition">Transparencia</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Concejo Deliberante</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Turismo</a></li>
+          </ul>
+        </div>
+       
+        <!-- Columna 3 -->
+        <div>
+          <h4 class="font-bold mb-4">Servicios</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Recolección de Residuos</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Alumbrado Público</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Espacios Verdes</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Tránsito y Transporte</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Cultura y Educación</a></li>
+          </ul>
+        </div>
+       
+        <!-- Columna 4 -->
+        <div>
+          <h4 class="font-bold mb-4">Boletín Oficial</h4>
+          <p class="text-gray-400 text-sm mb-4">
+            Suscríbase para recibir las novedades oficiales del municipio.
+          </p>
+          <form class="flex">
+            <input type="email"
+                   placeholder="Su email"
+                   class="flex-grow px-3 py-2 rounded-l text-gray-900 focus:outline-none focus:ring-2 focus:ring-acento">
+            <button type="submit" class="btn-acento px-4 py-2 rounded-r font-medium">
+              <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+     
+      <!-- Línea divisoria -->
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <p class="text-gray-500 text-sm">
+              © 2024 Municipalidad de Río Gallegos. Todos los derechos reservados.
+            </p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#" class="text-gray-500 hover:text-white text-sm transition">Términos de Uso</a>
+            <a href="#" class="text-gray-500 hover:text-white text-sm transition">Política de Privacidad</a>
+            <a href="#" class="text-gray-500 hover:text-white text-sm transition">Accesibilidad</a>
+            <a href="#" class="text-gray-500 hover:text-white text-sm transition">Mapa del Sitio</a>
+          </div>
+        </div>
+       
+        <div class="mt-6 text-center">
+          <p class="text-gray-600 text-xs">
+            Versión 1.0.0 | Este sitio cumple con los estándares de accesibilidad web WCAG 2.1
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    // Inicializar iconos
+    lucide.createIcons();
+   
+    // Scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+       
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+       
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const headerHeight = document.querySelector('header').offsetHeight;
+          const targetPosition = targetElement.offsetTop - headerHeight - 20;
+         
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+   
+    // Header sticky
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.classList.add('shadow-lg');
+      } else {
+        header.classList.remove('shadow-lg');
+      }
+    });
+   
+    // Animaciones al hacer scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+   
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animacion-fade');
+        }
+      });
+    }, observerOptions);
+   
+    // Observar elementos para animar
+    document.querySelectorAll('.card-institucional').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
 </html>
