@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
+use App\Http\Controllers\GovernmentSectionController;
 
 /*Route::get('/', function () {
     return Inertia::render('welcome', [
@@ -16,13 +17,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
 });
 
+Route::get('/gobierno', [GovernmentSectionController::class, 'index'])->name('public.Gobierno');
+
 Route::get('/', function () {
     return Inertia::render('public/Home');
 });
 
-Route::get('/gobierno', function () {
-    return Inertia::render('public/Gobierno');
-});
+
 
 Route::get('/tramites', function () {
     return Inertia::render('public/Tramites');
